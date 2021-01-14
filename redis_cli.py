@@ -7,6 +7,8 @@ try:
     print conn
     conn.ping()
     print 'Connected!'
+    print conn.get("Bahamas")
+    print conn.mset({"Croatia": "Zagreb", "Bahamas": "Nassau"})
 except Exception as ex:
     print 'Error:', ex
     exit('Failed to connect, terminating.')
